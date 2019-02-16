@@ -49,6 +49,11 @@
         <a class="btn btn-default" href="{{ .Site.Params.pocketcasts_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
       </div>
     {{ end }}
+        {{ if (isset .Site.Params "spotify_subscribe") }}
+        <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+            <a class="btn btn-default" href="{{ .Site.Params.spotify_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;Spotify</a>
+        </div>
+        {{ end }}
     {{ if (isset .Site.Params "rss_subscribe" )}}
       <div class = "d-flex p-2 subscribe_buttons col-md-auto">
         <a class="btn btn-default" href="{{ .Site.Params.rss_subscribe }}"><i class="fa fa-rss"></i>&nbsp;RSS</a>
